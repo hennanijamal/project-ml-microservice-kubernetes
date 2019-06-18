@@ -34,9 +34,51 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
+###  Running `web app`
+
+1. Afer successfully running the above files in Docker or Kubernnerts, run localhost:8000 on your browser
+2. Run the `make_predictions.sh` from the terminal.
+
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+### Include Files
+
+***.cicleci/config.yml***: This files contains code to test the project on CircleCi
+
+***model_data/boston_house prediction.joblib***: This files contains 
+
+***output_txt_files/docker_out.txt***: File with logs including predictions run in docker.
+
+***output_txt_files/kubernetes_out.txt***: File with logs including predictions run in kubernetes.
+
+***requirements.txt***: File includes dependencies that are required for this project
+
+***app.py***: This file contains the flask app codes.
+
+***run_docker.sh***: This shell script run and build a docker image locally and runs the flask app from the docker image.
+
+***run_kubernetes.sh***: This shell script runs the docker image from within a kubernetes cluster and deploys the flask app.
+
+***uploade_docker.sh***: This shell script pushes the local docker image to my docker repository.
+
+***make_predictions.sh***: This shell script is responsible for sending some input data to your containerized application via the appropriate port (port 8000 in this case).
+
+***hadolint***: This is the setup file for hadolint.
+
+***Makefile***: This contains intructions to setup your system with the `make` command.
+
+***Dockerfile***: Docker can build images automatically by reading the instructions from a Dockerfile.
+
+***minikube***: This is the setup file for minkube
+
+***README.md***: This file contains instructions on how to setup and run the project.
+
+***BugsReport.md***: This file contains a brief report on the bugs fund while running the project and possible fixes.
+
+#### NOTE!!:
+You willhave to modify the docker image id in line 15 of the `upload_docker.sh` file with you own image id obtained when you create a local docker image.
