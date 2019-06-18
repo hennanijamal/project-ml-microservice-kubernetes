@@ -81,4 +81,4 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ***BugsReport.md***: This file contains a brief report on the bugs fund while running the project and possible fixes.
 
 #### NOTE!!:
-You willhave to modify the docker image id in line 15 of the `upload_docker.sh` file with you own image id obtained when you create a local docker image.
+You will have to modify the docker image id in line 15 of the `upload_docker.sh` file with your own image ID obtained when you create a local docker image.
