@@ -37,7 +37,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ###  Running `web app`
 
 1. Afer successfully running the above files in Docker or Kubernnerts, run localhost:8000 on your browser
-2. Run the `make_predictions.sh` from the terminal.
+2. Run the `./make_predictions.sh` from the terminal.
 
 ### Kubernetes Steps
 
