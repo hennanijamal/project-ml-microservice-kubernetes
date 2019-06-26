@@ -69,8 +69,7 @@ If you are unable to resolve these issues with the suggestion above, try running
 
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
-* run `eval $(minikube docker-env)`
-* run `minikube start`
+* run `minikube start` (make sure you have a virtual machine installed e.g Virtual box)
 * run `./run_kubernetes.sh`
 * Create Flask app in Container
 * Run via kubectl
