@@ -34,15 +34,43 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
+#### Notes on running Shell file
+* If you are experiencing the following issues running the shell files, 
+    - ```
+    /usr/bin/env: 'bash\r': No such file or directory
+      ``` 
+      or 
+      ```
+    bash: ./run_docker.sh: /usr/bin/env: bad interpreter: No such file or directory
+    ``` 
+      As a quick fix, you can run this
+
+    ```
+    sed $'s/\r$//' ./shellFileName.sh > ./shellFileName.unix.sh
+    ```
+
+    and run the shellFileName.unix.sh instead. Replace shellFileName by the shell file you are trying to run.
+
+    Get more details here https://github.com/Ardakilic/backmeup/issues/5.
+    
+  
+If you are unable to resolve these issues with the suggestion above, try running the commands from the shell file manually on the terminal.
+
 ###  Running `web app`
 
-1. Afer successfully running the above files in Docker or Kubernnerts, run localhost:8000 on your browser
-2. Run the `./make_predictions.sh` from the terminal.
+1. Afer successfully running the above files in Docker or Kubernnerts, run localhost:8000 on your browser.
+2. Run the `./make_predictions.sh` from the terminal (the terminal here is different form the one used to deploy the app).
+3. You can now view the logs in a seperate terminal with the commands;
+    - `docker logs containerID` (when deployed on docker. Get the containerID with the command `docker ps -l`)
+    - `kubectl logs project-ml-microservice-kubernetes` (when deployed on kubernetes).
 
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
 * Setup and Configure Kubernetes locally
+* run `eval $(minikube docker-env)`
+* run `minikube start`
+* run `./run_kubernetes.sh`
 * Create Flask app in Container
 * Run via kubectl
 
@@ -75,4 +103,4 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ***BugsReport.md***: This file contains a brief report on the bugs fund while running the project and possible fixes.
 
 #### NOTE!!:
-You will have to modify the docker image id in line 15 of the `upload_docker.sh` file with your own image ID obtained when you create a local docker image.
+You will have to modify the docker image id in line 15 of the `upload_docker.sh` file with your own image ID obtained when you create a local docker image. Get the imageID with the command `docker image ls`
