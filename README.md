@@ -50,8 +50,6 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ***.cicleci/config.yml***: This files contains code to test the project on CircleCi
 
-***model_data/boston_house prediction.joblib***: This files contains 
-
 ***output_txt_files/docker_out.txt***: File with logs including predictions run in docker.
 
 ***output_txt_files/kubernetes_out.txt***: File with logs including predictions run in kubernetes.
