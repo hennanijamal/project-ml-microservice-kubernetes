@@ -36,14 +36,15 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 #### Notes on running Shell file
 * If you are experiencing the following issues running the shell files, 
-    - ```
-    /usr/bin/env: 'bash\r': No such file or directory
-      ``` 
-      or 
-      ```
-    bash: ./run_docker.sh: /usr/bin/env: bad interpreter: No such file or directory
     ``` 
-      As a quick fix, you can run this
+    /usr/bin/env: 'bash\r': No such file or directory
+    ``` 
+    or
+
+    ``` 
+    bash: ./run_docker.sh: /usr/bin/env: bad interpreter: No such file or directory    
+    ``` 
+    As a quick fix, you can run this
 
     ```
     sed $'s/\r$//' ./shellFileName.sh > ./shellFileName.unix.sh
