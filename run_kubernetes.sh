@@ -5,11 +5,11 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
-dockerpath=jamalhen/project-ml-microservice-kubernetes:latest
+dockerpath=jamalhen/project-ml-microservice-kubernetes
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run --generator=run-pod/v1 --image=$dockerpath project-ml-microservice-kubernetes --port=8000
+kubectl run --generator=run-pod/v1 --image=$dockerpath:latest project-ml-microservice-kubernetes --port=8000
 
 # Step 3:
 # List kubernetes pods
