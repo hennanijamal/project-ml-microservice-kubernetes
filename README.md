@@ -68,13 +68,9 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ***make_predictions.sh***: This shell script is responsible for sending some input data to your containerized application via the appropriate port (port 8000 in this case).
 
-***hadolint***: This is the setup file for hadolint.
-
 ***Makefile***: This contains intructions to setup your system with the `make` command.
 
 ***Dockerfile***: Docker can build images automatically by reading the instructions from a Dockerfile.
-
-***minikube***: This is the setup file for minkube
 
 ***README.md***: This file contains instructions on how to setup and run the project.
 
